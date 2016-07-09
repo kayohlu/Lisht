@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25F9E1D319BA1001788FE /* AppDelegate.swift */; };
+		CBC25FA11D319BA1001788FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FA01D319BA1001788FE /* ViewController.swift */; };
+		CBC25FA41D319BA1001788FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA21D319BA1001788FE /* Main.storyboard */; };
+		CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA51D319BA1001788FE /* Assets.xcassets */; };
+		CBC25FA91D319BA1001788FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA71D319BA1001788FE /* LaunchScreen.storyboard */; };
+		CBC25FB41D319BA1001788FE /* LishtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FB31D319BA1001788FE /* LishtTests.swift */; };
+		CBC25FBF1D319BA1001788FE /* LishtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FBE1D319BA1001788FE /* LishtUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBC25FB01D319BA1001788FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBC25F931D319BA1001788FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC25F9A1D319BA1001788FE;
+			remoteInfo = Lisht;
+		};
+		CBC25FBB1D319BA1001788FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBC25F931D319BA1001788FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC25F9A1D319BA1001788FE;
+			remoteInfo = Lisht;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBC25F9B1D319BA1001788FE /* Lisht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lisht.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC25F9E1D319BA1001788FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBC25FA01D319BA1001788FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBC25FA31D319BA1001788FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBC25FA51D319BA1001788FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBC25FA81D319BA1001788FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBC25FAA1D319BA1001788FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC25FAF1D319BA1001788FE /* LishtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LishtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC25FB31D319BA1001788FE /* LishtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LishtTests.swift; sourceTree = "<group>"; };
+		CBC25FB51D319BA1001788FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC25FBA1D319BA1001788FE /* LishtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LishtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC25FBE1D319BA1001788FE /* LishtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LishtUITests.swift; sourceTree = "<group>"; };
+		CBC25FC01D319BA1001788FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBC25F981D319BA1001788FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC25FAC1D319BA1001788FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC25FB71D319BA1001788FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBC25F921D319BA1001788FE = {
+			isa = PBXGroup;
+			children = (
+				CBC25F9D1D319BA1001788FE /* Lisht */,
+				CBC25FB21D319BA1001788FE /* LishtTests */,
+				CBC25FBD1D319BA1001788FE /* LishtUITests */,
+				CBC25F9C1D319BA1001788FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBC25F9C1D319BA1001788FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBC25F9B1D319BA1001788FE /* Lisht.app */,
+				CBC25FAF1D319BA1001788FE /* LishtTests.xctest */,
+				CBC25FBA1D319BA1001788FE /* LishtUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBC25F9D1D319BA1001788FE /* Lisht */ = {
+			isa = PBXGroup;
+			children = (
+				CBC25F9E1D319BA1001788FE /* AppDelegate.swift */,
+				CBC25FA01D319BA1001788FE /* ViewController.swift */,
+				CBC25FA21D319BA1001788FE /* Main.storyboard */,
+				CBC25FA51D319BA1001788FE /* Assets.xcassets */,
+				CBC25FA71D319BA1001788FE /* LaunchScreen.storyboard */,
+				CBC25FAA1D319BA1001788FE /* Info.plist */,
+			);
+			path = Lisht;
+			sourceTree = "<group>";
+		};
+		CBC25FB21D319BA1001788FE /* LishtTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBC25FB31D319BA1001788FE /* LishtTests.swift */,
+				CBC25FB51D319BA1001788FE /* Info.plist */,
+			);
+			path = LishtTests;
+			sourceTree = "<group>";
+		};
+		CBC25FBD1D319BA1001788FE /* LishtUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBC25FBE1D319BA1001788FE /* LishtUITests.swift */,
+				CBC25FC01D319BA1001788FE /* Info.plist */,
+			);
+			path = LishtUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBC25F9A1D319BA1001788FE /* Lisht */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC25FC31D319BA1001788FE /* Build configuration list for PBXNativeTarget "Lisht" */;
+			buildPhases = (
+				CBC25F971D319BA1001788FE /* Sources */,
+				CBC25F981D319BA1001788FE /* Frameworks */,
+				CBC25F991D319BA1001788FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lisht;
+			productName = Lisht;
+			productReference = CBC25F9B1D319BA1001788FE /* Lisht.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBC25FAE1D319BA1001788FE /* LishtTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC25FC61D319BA1001788FE /* Build configuration list for PBXNativeTarget "LishtTests" */;
+			buildPhases = (
+				CBC25FAB1D319BA1001788FE /* Sources */,
+				CBC25FAC1D319BA1001788FE /* Frameworks */,
+				CBC25FAD1D319BA1001788FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC25FB11D319BA1001788FE /* PBXTargetDependency */,
+			);
+			name = LishtTests;
+			productName = LishtTests;
+			productReference = CBC25FAF1D319BA1001788FE /* LishtTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBC25FB91D319BA1001788FE /* LishtUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC25FC91D319BA1001788FE /* Build configuration list for PBXNativeTarget "LishtUITests" */;
+			buildPhases = (
+				CBC25FB61D319BA1001788FE /* Sources */,
+				CBC25FB71D319BA1001788FE /* Frameworks */,
+				CBC25FB81D319BA1001788FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC25FBC1D319BA1001788FE /* PBXTargetDependency */,
+			);
+			name = LishtUITests;
+			productName = LishtUITests;
+			productReference = CBC25FBA1D319BA1001788FE /* LishtUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBC25F931D319BA1001788FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Karl Grogan";
+				TargetAttributes = {
+					CBC25F9A1D319BA1001788FE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CBC25FAE1D319BA1001788FE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CBC25F9A1D319BA1001788FE;
+					};
+					CBC25FB91D319BA1001788FE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CBC25F9A1D319BA1001788FE;
+					};
+				};
+			};
+			buildConfigurationList = CBC25F961D319BA1001788FE /* Build configuration list for PBXProject "Lisht" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBC25F921D319BA1001788FE;
+			productRefGroup = CBC25F9C1D319BA1001788FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBC25F9A1D319BA1001788FE /* Lisht */,
+				CBC25FAE1D319BA1001788FE /* LishtTests */,
+				CBC25FB91D319BA1001788FE /* LishtUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBC25F991D319BA1001788FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC25FA91D319BA1001788FE /* LaunchScreen.storyboard in Resources */,
+				CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */,
+				CBC25FA41D319BA1001788FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC25FAD1D319BA1001788FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC25FB81D319BA1001788FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBC25F971D319BA1001788FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC25FA11D319BA1001788FE /* ViewController.swift in Sources */,
+				CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC25FAB1D319BA1001788FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC25FB41D319BA1001788FE /* LishtTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC25FB61D319BA1001788FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC25FBF1D319BA1001788FE /* LishtUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBC25FB11D319BA1001788FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC25F9A1D319BA1001788FE /* Lisht */;
+			targetProxy = CBC25FB01D319BA1001788FE /* PBXContainerItemProxy */;
+		};
+		CBC25FBC1D319BA1001788FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC25F9A1D319BA1001788FE /* Lisht */;
+			targetProxy = CBC25FBB1D319BA1001788FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBC25FA21D319BA1001788FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC25FA31D319BA1001788FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBC25FA71D319BA1001788FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC25FA81D319BA1001788FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBC25FC11D319BA1001788FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBC25FC21D319BA1001788FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBC25FC41D319BA1001788FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lisht/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.Lisht;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBC25FC51D319BA1001788FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lisht/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.Lisht;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CBC25FC71D319BA1001788FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LishtTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.LishtTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lisht.app/Lisht";
+			};
+			name = Debug;
+		};
+		CBC25FC81D319BA1001788FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LishtTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.LishtTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lisht.app/Lisht";
+			};
+			name = Release;
+		};
+		CBC25FCA1D319BA1001788FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LishtUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.LishtUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lisht;
+			};
+			name = Debug;
+		};
+		CBC25FCB1D319BA1001788FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LishtUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.LishtUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lisht;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBC25F961D319BA1001788FE /* Build configuration list for PBXProject "Lisht" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC25FC11D319BA1001788FE /* Debug */,
+				CBC25FC21D319BA1001788FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC25FC31D319BA1001788FE /* Build configuration list for PBXNativeTarget "Lisht" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC25FC41D319BA1001788FE /* Debug */,
+				CBC25FC51D319BA1001788FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBC25FC61D319BA1001788FE /* Build configuration list for PBXNativeTarget "LishtTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC25FC71D319BA1001788FE /* Debug */,
+				CBC25FC81D319BA1001788FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBC25FC91D319BA1001788FE /* Build configuration list for PBXNativeTarget "LishtUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC25FCA1D319BA1001788FE /* Debug */,
+				CBC25FCB1D319BA1001788FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBC25F931D319BA1001788FE /* Project object */;
+}
