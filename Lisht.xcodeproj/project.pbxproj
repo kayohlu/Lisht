@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25F9E1D319BA1001788FE /* AppDelegate.swift */; };
 		CBC25FA11D319BA1001788FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FA01D319BA1001788FE /* ViewController.swift */; };
-		CBC25FA41D319BA1001788FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA21D319BA1001788FE /* Main.storyboard */; };
 		CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA51D319BA1001788FE /* Assets.xcassets */; };
-		CBC25FA91D319BA1001788FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA71D319BA1001788FE /* LaunchScreen.storyboard */; };
 		CBC25FB41D319BA1001788FE /* LishtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FB31D319BA1001788FE /* LishtTests.swift */; };
 		CBC25FBF1D319BA1001788FE /* LishtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FBE1D319BA1001788FE /* LishtUITests.swift */; };
+		CBC25FCF1D319F29001788FE /* SwipeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FCE1D319F29001788FE /* SwipeViewCell.m */; };
+		CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FD01D3237CB001788FE /* LishtTableViewController.swift */; };
+		CBC25FD31D32990E001788FE /* LishtItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FD21D32990E001788FE /* LishtItemViewCell.swift */; };
+		CBC25FD51D3299FD001788FE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FD41D3299FD001788FE /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,7 @@
 		CBC25F9B1D319BA1001788FE /* Lisht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lisht.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC25F9E1D319BA1001788FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC25FA01D319BA1001788FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CBC25FA31D319BA1001788FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBC25FA51D319BA1001788FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CBC25FA81D319BA1001788FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC25FAA1D319BA1001788FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC25FAF1D319BA1001788FE /* LishtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LishtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC25FB31D319BA1001788FE /* LishtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LishtTests.swift; sourceTree = "<group>"; };
@@ -47,6 +47,12 @@
 		CBC25FBA1D319BA1001788FE /* LishtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LishtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC25FBE1D319BA1001788FE /* LishtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LishtUITests.swift; sourceTree = "<group>"; };
 		CBC25FC01D319BA1001788FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC25FCC1D319F28001788FE /* Lisht-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lisht-Bridging-Header.h"; sourceTree = "<group>"; };
+		CBC25FCD1D319F29001788FE /* SwipeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeViewCell.h; sourceTree = "<group>"; };
+		CBC25FCE1D319F29001788FE /* SwipeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewCell.m; sourceTree = "<group>"; };
+		CBC25FD01D3237CB001788FE /* LishtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LishtTableViewController.swift; sourceTree = "<group>"; };
+		CBC25FD21D32990E001788FE /* LishtItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LishtItemViewCell.swift; sourceTree = "<group>"; };
+		CBC25FD41D3299FD001788FE /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,15 @@
 			isa = PBXGroup;
 			children = (
 				CBC25F9E1D319BA1001788FE /* AppDelegate.swift */,
+				CBC25FD01D3237CB001788FE /* LishtTableViewController.swift */,
+				CBC25FCD1D319F29001788FE /* SwipeViewCell.h */,
+				CBC25FD21D32990E001788FE /* LishtItemViewCell.swift */,
+				CBC25FD41D3299FD001788FE /* Item.swift */,
+				CBC25FCE1D319F29001788FE /* SwipeViewCell.m */,
 				CBC25FA01D319BA1001788FE /* ViewController.swift */,
-				CBC25FA21D319BA1001788FE /* Main.storyboard */,
 				CBC25FA51D319BA1001788FE /* Assets.xcassets */,
-				CBC25FA71D319BA1001788FE /* LaunchScreen.storyboard */,
 				CBC25FAA1D319BA1001788FE /* Info.plist */,
+				CBC25FCC1D319F28001788FE /* Lisht-Bridging-Header.h */,
 			);
 			path = Lisht;
 			sourceTree = "<group>";
@@ -229,9 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBC25FA91D319BA1001788FE /* LaunchScreen.storyboard in Resources */,
 				CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */,
-				CBC25FA41D319BA1001788FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */,
+				CBC25FD31D32990E001788FE /* LishtItemViewCell.swift in Sources */,
+				CBC25FCF1D319F29001788FE /* SwipeViewCell.m in Sources */,
 				CBC25FA11D319BA1001788FE /* ViewController.swift in Sources */,
+				CBC25FD51D3299FD001788FE /* Item.swift in Sources */,
 				CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,25 +303,6 @@
 			targetProxy = CBC25FBB1D319BA1001788FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CBC25FA21D319BA1001788FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBC25FA31D319BA1001788FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CBC25FA71D319BA1001788FE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBC25FA81D319BA1001788FE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBC25FC11D319BA1001788FE /* Debug */ = {
@@ -401,10 +394,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lisht/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.Lisht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lisht/Lisht-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +408,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lisht/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.Lisht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lisht/Lisht-Bridging-Header.h";
 			};
 			name = Release;
 		};
