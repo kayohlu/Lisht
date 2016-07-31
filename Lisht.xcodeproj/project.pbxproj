@@ -12,10 +12,10 @@
 		CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA51D319BA1001788FE /* Assets.xcassets */; };
 		CBC25FB41D319BA1001788FE /* LishtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FB31D319BA1001788FE /* LishtTests.swift */; };
 		CBC25FBF1D319BA1001788FE /* LishtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FBE1D319BA1001788FE /* LishtUITests.swift */; };
-		CBC25FCF1D319F29001788FE /* SwipeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FCE1D319F29001788FE /* SwipeViewCell.m */; };
 		CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FD01D3237CB001788FE /* LishtTableViewController.swift */; };
-		CBC25FD31D32990E001788FE /* LishtItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FD21D32990E001788FE /* LishtItemViewCell.swift */; };
 		CBC25FD51D3299FD001788FE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FD41D3299FD001788FE /* Item.swift */; };
+		CBC56BAF1D4D3082004167FF /* SwipeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */; };
+		CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC56BB01D4D5645004167FF /* SwipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +48,10 @@
 		CBC25FBE1D319BA1001788FE /* LishtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LishtUITests.swift; sourceTree = "<group>"; };
 		CBC25FC01D319BA1001788FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC25FCC1D319F28001788FE /* Lisht-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lisht-Bridging-Header.h"; sourceTree = "<group>"; };
-		CBC25FCD1D319F29001788FE /* SwipeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeViewCell.h; sourceTree = "<group>"; };
-		CBC25FCE1D319F29001788FE /* SwipeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewCell.m; sourceTree = "<group>"; };
 		CBC25FD01D3237CB001788FE /* LishtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LishtTableViewController.swift; sourceTree = "<group>"; };
-		CBC25FD21D32990E001788FE /* LishtItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LishtItemViewCell.swift; sourceTree = "<group>"; };
 		CBC25FD41D3299FD001788FE /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCellDelegate.swift; sourceTree = "<group>"; };
+		CBC56BB01D4D5645004167FF /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +104,13 @@
 			children = (
 				CBC25F9E1D319BA1001788FE /* AppDelegate.swift */,
 				CBC25FD01D3237CB001788FE /* LishtTableViewController.swift */,
-				CBC25FCD1D319F29001788FE /* SwipeViewCell.h */,
-				CBC25FD21D32990E001788FE /* LishtItemViewCell.swift */,
+				CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */,
 				CBC25FD41D3299FD001788FE /* Item.swift */,
-				CBC25FCE1D319F29001788FE /* SwipeViewCell.m */,
 				CBC25FA01D319BA1001788FE /* ViewController.swift */,
 				CBC25FA51D319BA1001788FE /* Assets.xcassets */,
 				CBC25FAA1D319BA1001788FE /* Info.plist */,
 				CBC25FCC1D319F28001788FE /* Lisht-Bridging-Header.h */,
+				CBC56BB01D4D5645004167FF /* SwipeCell.swift */,
 			);
 			path = Lisht;
 			sourceTree = "<group>";
@@ -265,9 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */,
-				CBC25FD31D32990E001788FE /* LishtItemViewCell.swift in Sources */,
-				CBC25FCF1D319F29001788FE /* SwipeViewCell.m in Sources */,
 				CBC25FA11D319BA1001788FE /* ViewController.swift in Sources */,
+				CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */,
+				CBC56BAF1D4D3082004167FF /* SwipeCellDelegate.swift in Sources */,
 				CBC25FD51D3299FD001788FE /* Item.swift in Sources */,
 				CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +395,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lisht/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.Lisht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lisht/Lisht-Bridging-Header.h";
@@ -411,6 +410,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lisht/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				New_Setting = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixiedc.Lisht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lisht/Lisht-Bridging-Header.h";
@@ -482,6 +482,7 @@
 				CBC25FC51D319BA1001788FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBC25FC61D319BA1001788FE /* Build configuration list for PBXNativeTarget "LishtTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +491,7 @@
 				CBC25FC81D319BA1001788FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBC25FC91D319BA1001788FE /* Build configuration list for PBXNativeTarget "LishtUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +500,7 @@
 				CBC25FCB1D319BA1001788FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

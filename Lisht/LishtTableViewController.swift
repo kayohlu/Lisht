@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LishtTableViewController: UITableViewController, UITextFieldDelegate {
+class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate {
     
     var items = [Item]()
 
@@ -19,7 +19,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate {
         self.items.append(Item(text: nil))
         
         // Register the SwipeViewCell as the Cell class/type we want to use to represent our Swipeable cells.
-        self.tableView.registerClass(SwipeViewCell.self, forCellReuseIdentifier: "SwipeViewCell")
+        self.tableView.registerClass(SwipeCell.self, forCellReuseIdentifier: "SwipeCell")
         
     }
 
@@ -38,12 +38,12 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("SwipeViewCell", forIndexPath: indexPath) as! SwipeViewCell
+        let cell = SwipeCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
         
         cell.textField.text = self.items[indexPath.row].text
         cell.textField.delegate = self
         cell.tag = indexPath.row
-        
+        cell.delegate = self
         return cell
     }
     
@@ -66,5 +66,13 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate {
         
         self.tableView.reloadData()
         return true
+    }
+    
+    func cellDidCompleteSwipe(cell: SwipeCell) {
+        print ("Cell did complete swipe.")
+        let indexPath = self.tableView.indexPathForCell(cell)
+        self.items.removeAtIndex(indexPath!.row)
+        self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Top)
+        self.tableView.reloadData()
     }
 }
