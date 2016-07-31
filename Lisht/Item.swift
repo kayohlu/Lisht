@@ -6,7 +6,7 @@
 //  Copyright © 2016 Karl Grogan. All rights reserved.
 //
 
-class Item: NSObject {
+class Item {
     var text:String?
     
     init(text: String?) {

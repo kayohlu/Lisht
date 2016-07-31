@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Karl Grogan. All rights reserved.
 //
 
+import UIKit
+
 class SwipeCell: UITableViewCell {
     var swipeContentView: UIView!
     var panRecognizer: UIPanGestureRecognizer!
@@ -14,7 +16,7 @@ class SwipeCell: UITableViewCell {
     var textField: UITextField!
     var delegate: SwipeCellDelegate?
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    init(style: UITableViewCellStyle, reuseIdentifier: String?, disableSwipe: Bool? = false) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code
         // Add a subView to hold our content that will be swiped.
@@ -30,11 +32,17 @@ class SwipeCell: UITableViewCell {
          *  This initializes a UIPanGestureRecognizer where the target is this cell instance where
          *  the panning action is handled with the panThisCell method
          */
-        self.panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SwipeCell.panThisCell(_:)))
-        // Set the recognizer delegate to this cell's instance
-        self.panRecognizer.delegate = self
-        // Adding the recognizer to our swipeContentView
-        self.swipeContentView.addGestureRecognizer(self.panRecognizer)
+        
+        // Functionality to turn on and off swiping.
+        // We disable swiping bt not adding the gesture recogniser for the cell.
+        if disableSwipe! == false {
+            self.panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SwipeCell.panThisCell(_:)))
+            // Set the recognizer delegate to this cell's instance
+            self.panRecognizer.delegate = self
+            // Adding the recognizer to our swipeContentView
+            self.swipeContentView.addGestureRecognizer(self.panRecognizer)
+        }
+        
         self.textField = UITextField(frame: CGRectMake(16, self.swipeContentView.frame.origin.y, self.swipeContentView.frame.size.width, self.swipeContentView.frame.size.height))
         self.textField.placeholder = "Tap to add an item."
         self.swipeContentView.addSubview(self.textField)
