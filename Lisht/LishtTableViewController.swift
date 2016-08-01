@@ -17,6 +17,8 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     
     self.tableView.rowHeight = 66.0
     
+    self.tableView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 250/255, alpha: 1)
+    
     // Initialize the first table cell as an empty Item.
     self.items.append(Item(text: nil))
     
@@ -58,6 +60,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     let preferredDescriptor = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
     let font = UIFont(name: "Roboto-Light", size: preferredDescriptor.pointSize)
     cell.textField.font = font
+    cell.textField.textColor = UIColor.init(red: 87/255, green: 85/255, blue: 91/255, alpha: 1)
     cell.tag = indexPath.row
     cell.delegate = self
     return cell

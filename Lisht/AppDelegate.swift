@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.backgroundColor = UIColor.whiteColor()
     self.window?.makeKeyAndVisible()
     
-    let navigationController = UINavigationController(rootViewController: LishtTableViewController())
+    let navigationController = UINavigationController(rootViewController: LishtTableViewController())  
+    navigationController.navigationBar.barTintColor = UIColor.init(red: 92/255, green: 158/255, blue: 173/255, alpha: 1)
     self.window?.rootViewController = navigationController
     
     return true

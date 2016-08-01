@@ -22,12 +22,12 @@ class SwipeCell: UITableViewCell {
     if (cellHeight != nil) {
       self.frame.size.height = cellHeight!
     }
-    
+        
         
     // Add a subView to hold our content that will be swiped.
     // Create a UIView that is the same width, height, and origin as the cell's content view
     self.swipeContentView = UIView(frame: self.contentView.superview!.frame)
-    self.swipeContentView.backgroundColor = UIColor.whiteColor()
+    self.swipeContentView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 250/255, alpha: 1)
     self.contentView.addSubview(self.swipeContentView)
     // Adding color to the content view to make the layers distinguishable.
     self.contentView.backgroundColor = UIColor(red: 122.0/255.0, green: 223.0/255.0, blue: 187.0/255.0, alpha: 1.0)
