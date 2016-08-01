@@ -8,6 +8,6 @@
 
 import Foundation
 
-@objc protocol SwipeCellDelegate {
+protocol SwipeCellDelegate {
     func cellDidCompleteSwipe(cell: SwipeCell)
 }
