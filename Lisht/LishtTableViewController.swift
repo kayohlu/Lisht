@@ -84,7 +84,12 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
   func cellDidCompleteSwipe(cell: SwipeCell) {
     let indexPath = self.tableView.indexPathForCell(cell)
     self.items.removeAtIndex(indexPath!.row)
-    self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
-    self.tableView.reloadData()
+    self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.None)
+    UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseInOut, animations: {
+      var newFrame = cell.frame
+      newFrame.origin.y -= self.tableView.rowHeight
+      cell.frame = newFrame
+      }, completion: nil)
+    
   }
 }

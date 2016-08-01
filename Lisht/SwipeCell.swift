@@ -182,8 +182,10 @@ class SwipeCell: UITableViewCell {
       UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut, animations: {
         self.panRecognizer.view!.frame = CGRectMake(self.panRecognizer.view!.superview!.frame.size.width, self.panRecognizer.view!.superview!.frame.origin.y, self.panRecognizer.view!.frame.size.width, self.panRecognizer.view!.frame.size.height)
         //UIView.commitAnimations()
-        self.delegate?.cellDidCompleteSwipe(self)
-        }, completion: nil)
+        
+        }, completion: { _ in
+          self.delegate?.cellDidCompleteSwipe(self)
+      })
       
     }
   }
