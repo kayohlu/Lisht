@@ -19,10 +19,10 @@ class SwipeCell: UITableViewCell {
   init(style: UITableViewCellStyle, reuseIdentifier: String?, disableSwipe: Bool? = false, cellHeight: CGFloat?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
+    // The cell height may be passed in because the table row height may not be the default on and I want the cell to occupy the full height of the row as well.
     if (cellHeight != nil) {
       self.frame.size.height = cellHeight!
     }
-        
         
     // Add a subView to hold our content that will be swiped.
     // Create a UIView that is the same width, height, and origin as the cell's content view
@@ -31,16 +31,15 @@ class SwipeCell: UITableViewCell {
     self.contentView.addSubview(self.swipeContentView)
     // Adding color to the content view to make the layers distinguishable.
     self.contentView.backgroundColor = UIColor(red: 122.0/255.0, green: 223.0/255.0, blue: 187.0/255.0, alpha: 1.0)
-    // Add color to the swipe content view.
-    /*
-     *  Initialize the pan gesture recognizer.
-     *  This initializes a UIPanGestureRecognizer where the target is this cell instance where
-     *  the panning action is handled with the panThisCell method
-     */
     
     // Functionality to turn on and off swiping.
-    // We disable swiping bt not adding the gesture recogniser for the cell.
+    // We disable swiping by not adding the gesture recogniser for the cell.
     if disableSwipe! == false {
+      /*
+       *  Initialize the pan gesture recognizer.
+       *  This initializes a UIPanGestureRecognizer where the target is this cell instance where
+       *  the panning action is handled with the panThisCell method
+       */
       self.panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SwipeCell.panThisCell(_:)))
       // Set the recognizer delegate to this cell's instance
       self.panRecognizer.delegate = self
@@ -49,11 +48,11 @@ class SwipeCell: UITableViewCell {
     }
     
     self.textField = UITextField(frame: CGRectMake(16, self.swipeContentView.frame.origin.y, self.swipeContentView.frame.size.width, self.swipeContentView.frame.size.height))
-    self.textField.placeholder = "Tap to add an item."
+    
     self.swipeContentView.addSubview(self.textField)
+    
     //Init amount
-    self.amount = 0
-        
+    self.amount = 0        
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -91,7 +90,6 @@ class SwipeCell: UITableViewCell {
       // This line resets the translation of the recognizer every time the Began state is triggered.
       recognizer.setTranslation(CGPointMake(0, 0), inView: self.swipeContentView)
       
-    //break
     case UIGestureRecognizerState.Changed:
       
       print("Pan Gesture changed.")

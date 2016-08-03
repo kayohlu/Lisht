@@ -54,7 +54,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
       cell = SwipeCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: nil, cellHeight: self.tableView.rowHeight)
     }
     
-    
+    cell.textField.placeholder = "Tap to add an item."
     cell.textField.text = self.items[indexPath.row].text    
     cell.textField.delegate = self
     let preferredDescriptor = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
@@ -63,6 +63,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     cell.textField.textColor = UIColor.init(red: 87/255, green: 85/255, blue: 91/255, alpha: 1)
     cell.tag = indexPath.row
     cell.delegate = self
+    
     return cell
   }
   
@@ -75,7 +76,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
         let item = self.items[itemIndex]
         item.text = textField.text
       } else {
-        self.items.append(Item(text: textField.text))
+        self.items.insert(Item(text: textField.text), atIndex: 1)
       }
     }
     
@@ -87,12 +88,6 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
   func cellDidCompleteSwipe(cell: SwipeCell) {
     let indexPath = self.tableView.indexPathForCell(cell)
     self.items.removeAtIndex(indexPath!.row)
-    self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.None)
-    UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseInOut, animations: {
-      var newFrame = cell.frame
-      newFrame.origin.y -= self.tableView.rowHeight
-      cell.frame = newFrame
-      }, completion: nil)
-    
+    self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
   }
 }

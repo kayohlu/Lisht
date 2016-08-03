@@ -37,6 +37,8 @@
 		<string>Roboto-Thin.ttf</string>
 		<string>Roboto-BlackItalic.ttf</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>Default</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
