@@ -96,7 +96,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
                   
       let vc: UIViewController = ReminderViewController()
       vc.view.backgroundColor = UIColor.clearColor()      
-      self.presentViewController(vc, animated: true, completion: nil)
+      self.presentViewController(vc, animated: false, completion: nil)
       
     }
     

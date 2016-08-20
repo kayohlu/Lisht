@@ -8,14 +8,25 @@
 
 import UIKit
 
-class ReminderViewController: UIViewController {
+class ReminderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+  var containerView: UIView!
+  var tableView: UITableView!
 
   override func viewDidLoad() {
     self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
     
-    
-        
-    let containerView: UIView = UIView(frame: self.view.frame)    
+    createContainerViewAndLayoutContraints()
+    createTableViewAndLayoutContraints()
+    addGestureRecognisers()    
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+  }
+  
+  func createContainerViewAndLayoutContraints() {
+    containerView = UIView(frame: self.view.frame)
     containerView.layer.cornerRadius = 5;
     containerView.layer.masksToBounds = true;
     self.view.addSubview(containerView)
@@ -29,9 +40,13 @@ class ReminderViewController: UIViewController {
     NSLayoutConstraint(item: containerView, attribute: NSLayoutAttribute.Trailing , relatedBy: .Equal, toItem: view, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: -40.0).active = true
     
     containerView.translatesAutoresizingMaskIntoConstraints = false
-    
-    
-    let tableView: UITableView = UITableView(frame: containerView.frame)
+  }
+  
+  func createTableViewAndLayoutContraints() {
+    tableView = UITableView(frame: containerView.frame)
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.reloadData()
     containerView.addSubview(tableView)
     
     NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.CenterX , relatedBy: .Equal, toItem: containerView, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0).active = true
@@ -43,20 +58,14 @@ class ReminderViewController: UIViewController {
     NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.Trailing , relatedBy: .Equal, toItem: containerView, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0.0).active = true
     
     tableView.translatesAutoresizingMaskIntoConstraints = false
-    
-    
+  }
+  
+  func addGestureRecognisers() {
     let dismissGestureRecogniser: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ReminderViewController.dismissVC))
     self.view.addGestureRecognizer(dismissGestureRecogniser)
     
     let swallowGestureRecogniser: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ReminderViewController.swallowTouch))
     containerView.addGestureRecognizer(swallowGestureRecogniser)
-    
-  }
-  
-  
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    self.view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
   }
   
   func dismissVC()  {
@@ -64,4 +73,22 @@ class ReminderViewController: UIViewController {
   }
   
   func swallowTouch() {}
+  
+  // MARK tableview delegate methods
+  
+  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 6
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = UITableViewCell()
+    cell.textLabel?.text = indexPath.row.description
+    
+    return cell
+  }
+
 }
