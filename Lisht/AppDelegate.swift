@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.makeKeyAndVisible()
     
     let navigationController = UINavigationController(rootViewController: LishtTableViewController())  
-    navigationController.navigationBar.barTintColor = UIColor.init(red: 92/255, green: 158/255, blue: 173/255, alpha: 1)
+    navigationController.navigationBar.barTintColor = UIColor.init(red: 237/255, green: 106/255, blue: 90/255, alpha: 1)
     self.window?.rootViewController = navigationController
     
     return true
