@@ -86,8 +86,19 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
   
   // MARK: - SwipeCell delegate method.
   func cellDidCompleteSwipe(cell: SwipeCell) {
-    let indexPath = self.tableView.indexPathForCell(cell)
-    self.items.removeAtIndex(indexPath!.row)
-    self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
+    if cell.swipeDirection == .LeftToRight {
+      
+      let indexPath = self.tableView.indexPathForCell(cell)
+      self.items.removeAtIndex(indexPath!.row)
+      self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
+      
+    } else if cell.swipeDirection == .RightToLeft {
+                  
+      let vc: UIViewController = ReminderViewController()
+      vc.view.backgroundColor = UIColor.clearColor()      
+      self.presentViewController(vc, animated: true, completion: nil)
+      
+    }
+    
   }
 }

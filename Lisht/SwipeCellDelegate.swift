@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SwipeCellDelegate {
-    func cellDidCompleteSwipe(cell: SwipeCell)
+  func cellDidCompleteSwipe(cell: SwipeCell)
 }
