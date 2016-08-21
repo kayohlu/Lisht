@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate {
   
@@ -25,7 +26,9 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     // Register the SwipeViewCell as the Cell class/type we want to use to represent our Swipeable cells.
     self.tableView.registerClass(SwipeCell.self, forCellReuseIdentifier: "SwipeCell")
     
-    
+    let managedObjectContext = NSManagedObjectContext()
+    let persistenCoordinator = NSPersistentStoreCoordinator()
+    managedObjectContext.persistentStoreCoordinator = persistenCoordinator
   }
   
   override func didReceiveMemoryWarning() {
@@ -86,17 +89,23 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
   
   // MARK: - SwipeCell delegate method.
   func cellDidCompleteSwipe(cell: SwipeCell) {
+    let indexPath = self.tableView.indexPathForCell(cell)
     if cell.swipeDirection == .LeftToRight {
       
-      let indexPath = self.tableView.indexPathForCell(cell)
+      
       self.items.removeAtIndex(indexPath!.row)
       self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
       
     } else if cell.swipeDirection == .RightToLeft {
-                  
-      let vc: UIViewController = ReminderViewController()
-      vc.view.backgroundColor = UIColor.clearColor()      
-      self.presentViewController(vc, animated: false, completion: nil)
+      
+      let reminderVC = ReminderViewController()
+      reminderVC.didSelectReminder = {
+        reminderVC.dismissViewControllerAnimated(true, completion: nil)
+        self.tableView.reloadData()
+//        let item = self.items[indexPath!.row]
+      }
+      reminderVC.view.backgroundColor = UIColor.clearColor()
+      self.presentViewController(reminderVC, animated: false, completion: nil)
       
     }
     
