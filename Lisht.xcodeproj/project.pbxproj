@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D4286E21A47EC13959066CE /* Pods_Lisht.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6463C84863A01C4AA3105847 /* Pods_Lisht.framework */; };
 		CB4053E51D564C87002ED278 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053DC1D564C87002ED278 /* Default-568h@2x.png */; };
 		CB4053E61D564C87002ED278 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053DD1D564C87002ED278 /* Default-667h@2x.png */; };
 		CB4053E71D564C87002ED278 /* Default-Landscape-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053DE1D564C87002ED278 /* Default-Landscape-736h@3x.png */; };
@@ -17,6 +18,7 @@
 		CB4053EC1D564C87002ED278 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053E31D564C87002ED278 /* Default-Portrait@2x.png */; };
 		CB4053ED1D564C87002ED278 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053E41D564C87002ED278 /* Default@2x.png */; };
 		CB4053EF1D5794B9002ED278 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4053EE1D5794B9002ED278 /* ReminderViewController.swift */; };
+		CB8AB6CF1D69E833006B671B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB6CD1D69E833006B671B /* DataModel.xcdatamodeld */; };
 		CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25F9E1D319BA1001788FE /* AppDelegate.swift */; };
 		CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA51D319BA1001788FE /* Assets.xcassets */; };
 		CBC25FB41D319BA1001788FE /* LishtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25FB31D319BA1001788FE /* LishtTests.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6463C84863A01C4AA3105847 /* Pods_Lisht.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lisht.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C65B6C31495AA3367596B0E /* Pods-Lisht.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lisht.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lisht/Pods-Lisht.release.xcconfig"; sourceTree = "<group>"; };
 		CB4053DC1D564C87002ED278 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CB4053DD1D564C87002ED278 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		CB4053DE1D564C87002ED278 /* Default-Landscape-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-736h@3x.png"; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		CB4053E31D564C87002ED278 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		CB4053E41D564C87002ED278 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CB4053EE1D5794B9002ED278 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		CB8AB6CE1D69E833006B671B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		CBC25F9B1D319BA1001788FE /* Lisht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lisht.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC25F9E1D319BA1001788FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC25FA51D319BA1001788FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		CBC418F21D4F425B0093214E /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCellDelegate.swift; sourceTree = "<group>"; };
 		CBC56BB01D4D5645004167FF /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
+		D63AEAAE6C3DA269A643B983 /* Pods-Lisht.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lisht.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lisht/Pods-Lisht.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4286E21A47EC13959066CE /* Pods_Lisht.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A50F31786EBBC9F6B9471FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6463C84863A01C4AA3105847 /* Pods_Lisht.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBC25F921D319BA1001788FE = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +143,8 @@
 				CBC25FB21D319BA1001788FE /* LishtTests */,
 				CBC25FBD1D319BA1001788FE /* LishtUITests */,
 				CBC25F9C1D319BA1001788FE /* Products */,
+				EA0B17BA9F16D8C6DD4969E5 /* Pods */,
+				2A50F31786EBBC9F6B9471FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +169,7 @@
 				CBC25FA51D319BA1001788FE /* Assets.xcassets */,
 				CBC25FAA1D319BA1001788FE /* Info.plist */,
 				CBC56BB01D4D5645004167FF /* SwipeCell.swift */,
+				CB8AB6CD1D69E833006B671B /* DataModel.xcdatamodeld */,
 			);
 			path = Lisht;
 			sourceTree = "<group>";
@@ -210,6 +228,15 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		EA0B17BA9F16D8C6DD4969E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D63AEAAE6C3DA269A643B983 /* Pods-Lisht.debug.xcconfig */,
+				8C65B6C31495AA3367596B0E /* Pods-Lisht.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,9 +244,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBC25FC31D319BA1001788FE /* Build configuration list for PBXNativeTarget "Lisht" */;
 			buildPhases = (
+				D06136ADCB26E50AB216CC83 /* [CP] Check Pods Manifest.lock */,
 				CBC25F971D319BA1001788FE /* Sources */,
 				CBC25F981D319BA1001788FE /* Frameworks */,
 				CBC25F991D319BA1001788FE /* Resources */,
+				F4F178A04F3D290F2342681C /* [CP] Embed Pods Frameworks */,
+				A83220AF16974A6B3C6D999D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,6 +386,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A83220AF16974A6B3C6D999D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lisht/Pods-Lisht-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06136ADCB26E50AB216CC83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F4F178A04F3D290F2342681C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lisht/Pods-Lisht-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CBC25F971D319BA1001788FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -364,6 +442,7 @@
 				CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */,
 				CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */,
 				CB4053EF1D5794B9002ED278 /* ReminderViewController.swift in Sources */,
+				CB8AB6CF1D69E833006B671B /* DataModel.xcdatamodeld in Sources */,
 				CBC56BAF1D4D3082004167FF /* SwipeCellDelegate.swift in Sources */,
 				CBC25FD51D3299FD001788FE /* Item.swift in Sources */,
 				CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */,
@@ -489,6 +568,7 @@
 		};
 		CBC25FC41D319BA1001788FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D63AEAAE6C3DA269A643B983 /* Pods-Lisht.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -508,6 +588,7 @@
 		};
 		CBC25FC51D319BA1001788FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C65B6C31495AA3367596B0E /* Pods-Lisht.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -610,6 +691,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB8AB6CD1D69E833006B671B /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB8AB6CE1D69E833006B671B /* DataModel.xcdatamodel */,
+			);
+			currentVersion = CB8AB6CE1D69E833006B671B /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CBC25F931D319BA1001788FE /* Project object */;
 }
