@@ -10,7 +10,7 @@ import UIKit
 import Timepiece
 
 class ReminderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  var didSelectReminder: () -> () = {}
+  var didSelectReminder: () -> () = {} // Empty block instance variable so when the instance is created it is provided then.
   var containerView: UIView!
   var tableView: UITableView!
   var reminderTimes: [String] = [
@@ -19,6 +19,15 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
     "At The Weekend",
     "A Specific Time"
   ]
+  
+  init() {
+    super.init(nibName: nil, bundle: nil)
+    view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
   
   override func viewDidLoad() {
     self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
@@ -30,7 +39,7 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    self.view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+    
   }
   
   func createContainerViewAndLayoutContraints() {
