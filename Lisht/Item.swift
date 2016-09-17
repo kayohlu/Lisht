@@ -8,8 +8,8 @@
 
 import CoreData
 
-class Item: NSManagedObject {
-    @NSManaged var text:String?
+class Item {
+    var text:String?
     
     init(text: String?) {
         self.text = text
