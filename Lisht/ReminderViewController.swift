@@ -22,7 +22,7 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
   
   init() {
     super.init(nibName: nil, bundle: nil)
-    view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+    view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.8)
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -31,7 +31,8 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
   
   override func viewDidLoad() {
     self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-    
+        
+    createBlurView()
     createContainerViewAndLayoutContraints()
     createTableViewAndLayoutContraints()
     addGestureRecognisers()
@@ -39,7 +40,14 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    
+    self.view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+  }
+  
+  func createBlurView() {
+    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+    let beView = UIVisualEffectView(effect: blurEffect)
+    beView.frame = self.view.bounds;
+    self.view.insertSubview(beView, atIndex: 0)
   }
   
   func createContainerViewAndLayoutContraints() {

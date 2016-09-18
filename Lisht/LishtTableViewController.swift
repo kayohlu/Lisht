@@ -97,7 +97,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
       self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
       
     } else if cell.swipeDirection == .RightToLeft {
-      
+                  
       let reminderVC = ReminderViewController()
       reminderVC.didSelectReminder = {
         reminderVC.dismissViewControllerAnimated(true, completion: nil)
