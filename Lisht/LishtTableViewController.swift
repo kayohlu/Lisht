@@ -102,7 +102,9 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
       reminderVC.didSelectReminder = {
         reminderVC.dismissViewControllerAnimated(true, completion: nil)
         self.tableView.reloadData()
-//        let item = self.items[indexPath!.row]
+      }
+      reminderVC.didDismissReminder = {
+        self.tableView.reloadData()
       }
       reminderVC.view.backgroundColor = UIColor.clearColor()
       self.presentViewController(reminderVC, animated: false, completion: nil)

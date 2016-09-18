@@ -11,6 +11,7 @@ import Timepiece
 
 class ReminderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   var didSelectReminder: () -> () = {} // Empty block instance variable so when the instance is created it is provided then.
+  var didDismissReminder: () -> () = {} // Empty block instance variable so when the instance is created it is provided then.
   var containerView: UIView!
   var tableView: UITableView!
   var reminderTimes: [String] = [
@@ -113,6 +114,7 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
   
   func dismissVC(sender: AnyObject)  {
     self.dismissViewControllerAnimated(true, completion: nil)
+    didDismissReminder()
   }
   
   func swallowTouch(sender: AnyObject) {
