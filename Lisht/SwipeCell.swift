@@ -35,8 +35,6 @@ class SwipeCell: UITableViewCell {
     self.swipeContentView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 250/255, alpha: 1)
     self.contentView.addSubview(self.swipeContentView)
     
-    
-    
     // Functionality to turn on and off swiping.
     // We disable swiping by not adding the gesture recogniser for the cell.
     if disableSwipe! == false {
@@ -61,9 +59,9 @@ class SwipeCell: UITableViewCell {
     
     self.swipeDirection = .None
   }
-  
+    
   required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+      fatalError("init(coder:) has not been implemented")
   }
   
   // This method is the handler for the pan gesture we added to the swipeContentView.
@@ -71,7 +69,7 @@ class SwipeCell: UITableViewCell {
   func panThisCell(recognizer: UIPanGestureRecognizer) {
     // This point represents where the position of the user's finger is relative to where the pan began.
     let panPoint: CGPoint = recognizer.translationInView(self.swipeContentView)
-    print("Pan position relative to it's start point: \(NSStringFromCGPoint(panPoint))")
+    print("Pan position relative to it's start point: \(NSStringFromCGPoint(panPoint))", terminator: "")
     
     let translation: CGPoint = recognizer.translationInView(self.swipeContentView)
     
@@ -79,16 +77,16 @@ class SwipeCell: UITableViewCell {
     switch recognizer.state {
     case UIGestureRecognizerState.Began:
       setContentViewBackgroundColor(translation)
-      print("Pan Gesture began.")
+      print("Pan Gesture began.", terminator: "")
       print("Cell recursive description:\n\n\(self.performSelector(Selector("recursiveDescription")))\n\n")
       translate(recognizer, translation: translation)
     case UIGestureRecognizerState.Changed:
       // WARNING Need to change the backgroundcolor only when the edge is back to its original prositoin.
       setContentViewBackgroundColor(translation)
-      print("Pan Gesture changed.")
+      print("Pan Gesture changed.", terminator: "")
       translate(recognizer, translation: translation)
     case UIGestureRecognizerState.Ended:
-      print("Pan gesture ended.")
+      print("Pan gesture ended.", terminator: "")
       print("Cell recursive description:\n\n\(self.performSelector(Selector("recursiveDescription")))\n\n")
       calculateTrigger() // Check for trigger point to complete the swipe or return to the beginning.
     default:
@@ -118,14 +116,14 @@ class SwipeCell: UITableViewCell {
   }
   
   func calculateTrigger() {
-    print("Calculating trigger point.")
+    print("Calculating trigger point.", terminator: "")
     // Formula for caluclating the percentages is: current x coordinate of the view's origin divided by the width.
     let currentSwipPercentage: CGFloat = (((self.panRecognizer.view!.frame.origin.x/(self.panRecognizer.view!.frame.size.width))*100))
-    print("Current swipe percentage: \(currentSwipPercentage)")
+    print("Current swipe percentage: \(currentSwipPercentage)", terminator: "")
     // Logic to decide what the trigger points are.
     // If the swipe is not greater than or equal to the a 40% this will allow the user to cancel what they want to do.
     if fabs(currentSwipPercentage) <= 40.0 {
-      print("Cancel trigger point.")
+      print("Cancel trigger point.", terminator: "")
       /*
        *  The below animation logic chains the animations we want to do when the user 'cancels' their swipe.
        *  The first animations slides the view aback to its original position.
@@ -135,7 +133,7 @@ class SwipeCell: UITableViewCell {
       
       UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseInOut, animations: {
         //UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationCurve.EaseInOut, .CurveEaseInOut, animations: {
-        print("Returning animation")
+        print("Returning animation", terminator: "")
         // Use the frame of the super view because its frame contains the original position we want
         // to set the final position of the swipeContentView
         self.panRecognizer.view!.frame = self.panRecognizer.view!.superview!.frame
@@ -143,7 +141,7 @@ class SwipeCell: UITableViewCell {
         }, completion: { (finished: Bool) in
           // Completion block of the first animation
           UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseInOut, animations: {
-            print("Returning animation")
+            print("Returning animation", terminator: "")
             // This will be the final destination of the bounce animation. It's the same as its original postioin plus one point on hte x-axis.
             if self.swipeDirection == .LeftToRight {
               self.panRecognizer.view!.frame = CGRectMake(self.panRecognizer.view!.superview!.frame.origin.x+1, self.panRecognizer.view!.superview!.frame.origin.y, self.panRecognizer.view!.frame.size.width, self.panRecognizer.view!.frame.size.height)
@@ -153,7 +151,7 @@ class SwipeCell: UITableViewCell {
             
             }, completion: { (finished: Bool) in
               // Completion block of the second animation.
-              print("Returning animation")
+              print("Returning animation", terminator: "")
               
               UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseInOut, animations: {
                 // Use the frame of the super view because it's frame contains the original position we want
@@ -167,7 +165,7 @@ class SwipeCell: UITableViewCell {
           
       })
     } else {
-      print("Apply swipe action trigger point.")
+      print("Apply swipe action trigger point.", terminator: "")
       UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut, animations: {
         if self.swipeDirection == .LeftToRight {
           self.panRecognizer.view!.frame = CGRectMake(self.panRecognizer.view!.superview!.frame.size.width, self.panRecognizer.view!.superview!.frame.origin.y, self.panRecognizer.view!.frame.size.width, self.panRecognizer.view!.frame.size.height)

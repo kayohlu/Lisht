@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate {
+class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate, UIViewControllerTransitioningDelegate {
   
   var items = [Item]()
   
@@ -87,6 +87,11 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     return true
   }
   
+  // Delegate method for UIViewControllerTransitioningDelegate
+  func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    return ModalAnimationController()
+  }
+  
   // MARK: - SwipeCell delegate method.
   func cellDidCompleteSwipe(cell: SwipeCell) {
     let indexPath = self.tableView.indexPathForCell(cell)
@@ -99,8 +104,10 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     } else if cell.swipeDirection == .RightToLeft {
                   
       let reminderVC = ReminderViewController()
-      reminderVC.didSelectReminder = {
-        reminderVC.dismissViewControllerAnimated(true, completion: nil)
+        
+        //reminderVC.transitioningDelegate = self
+      
+      reminderVC.didSelectReminder = {        
         self.tableView.reloadData()
       }
       reminderVC.didDismissReminder = {
@@ -108,7 +115,6 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
       }
       reminderVC.view.backgroundColor = UIColor.clearColor()
       self.presentViewController(reminderVC, animated: false, completion: nil)
-      
     }
     
   }

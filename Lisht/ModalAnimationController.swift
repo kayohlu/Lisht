@@ -1,4 +1,4 @@
-//
+  //
 //  ModalAnimationController.swift
 //  Lisht
 //
@@ -11,7 +11,7 @@ import UIKit
 class ModalAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
   
   func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-    return 1.0
+    return 5.0
   }
   
   func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -21,16 +21,19 @@ class ModalAnimationController: NSObject, UIViewControllerAnimatedTransitioning 
     let finalFrameForVC = transitionContext.finalFrameForViewController(toViewController)
     let containerView = transitionContext.containerView()
     let bounds = UIScreen.mainScreen().bounds
-    toViewController.view.frame = CGRectOffset(finalFrameForVC, 0, bounds.size.height)
+    toViewController.view.frame = CGRectOffset(finalFrameForVC, bounds.size.width, 0)
     containerView!.addSubview(toViewController.view)
     
     UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: .CurveLinear, animations: {
       fromViewController.view.alpha = 0.5
       toViewController.view.frame = finalFrameForVC
-      }, completion: { finished in
+      }, completion: {
+        finished in
         transitionContext.completeTransition(true)
         fromViewController.view.alpha = 1.0
     })
+  
+  
   }
   
 

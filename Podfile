@@ -1,4 +1,4 @@
 target 'Lisht' do
   use_frameworks!
-  pod "Timepiece"
+  pod "Timepiece", "= 0.4.2"  
 end

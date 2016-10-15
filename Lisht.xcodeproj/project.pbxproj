@@ -18,6 +18,7 @@
 		CB4053EC1D564C87002ED278 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053E31D564C87002ED278 /* Default-Portrait@2x.png */; };
 		CB4053ED1D564C87002ED278 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053E41D564C87002ED278 /* Default@2x.png */; };
 		CB4053EF1D5794B9002ED278 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4053EE1D5794B9002ED278 /* ReminderViewController.swift */; };
+		CB8A5C5B1DB27AFA0033D41B /* ReminderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A5C5A1DB27AFA0033D41B /* ReminderItemCell.swift */; };
 		CB8AB6CF1D69E833006B671B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB6CD1D69E833006B671B /* DataModel.xcdatamodeld */; };
 		CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25F9E1D319BA1001788FE /* AppDelegate.swift */; };
 		CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA51D319BA1001788FE /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		CB4053E31D564C87002ED278 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		CB4053E41D564C87002ED278 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CB4053EE1D5794B9002ED278 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		CB8A5C5A1DB27AFA0033D41B /* ReminderItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderItemCell.swift; sourceTree = "<group>"; };
 		CB8AB6CE1D69E833006B671B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		CBC25F9B1D319BA1001788FE /* Lisht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lisht.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC25F9E1D319BA1001788FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				CBC25FAA1D319BA1001788FE /* Info.plist */,
 				CBC56BB01D4D5645004167FF /* SwipeCell.swift */,
 				CB8AB6CD1D69E833006B671B /* DataModel.xcdatamodeld */,
+				CB8A5C5A1DB27AFA0033D41B /* ReminderItemCell.swift */,
 			);
 			path = Lisht;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 		CBC25F931D319BA1001788FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Karl Grogan";
@@ -444,6 +448,7 @@
 			files = (
 				CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */,
 				CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */,
+				CB8A5C5B1DB27AFA0033D41B /* ReminderItemCell.swift in Sources */,
 				CBF732E91D8D6D5900B1DC3B /* ModalAnimationController.swift in Sources */,
 				CB4053EF1D5794B9002ED278 /* ReminderViewController.swift in Sources */,
 				CB8AB6CF1D69E833006B671B /* DataModel.xcdatamodeld in Sources */,
