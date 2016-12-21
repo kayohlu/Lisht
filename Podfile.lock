@@ -1,12 +1,15 @@
 PODS:
+  - CNPGridMenu (0.3.0)
   - Timepiece (0.4.2)
 
 DEPENDENCIES:
+  - CNPGridMenu
   - Timepiece (= 0.4.2)
 
 SPEC CHECKSUMS:
+  CNPGridMenu: 0938e9182b321282dd246692625bb7954c8294bb
   Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
 
-PODFILE CHECKSUM: 9a4c0b890ec54dcfecdaf7b50c2a6431d8f37734
+PODFILE CHECKSUM: a858dc988719f6e82ccf92795c3e66f7c7978b74
 
 COCOAPODS: 1.0.1

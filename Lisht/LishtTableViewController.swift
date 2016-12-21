@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import CNPGridMenu
 
-class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate, UIViewControllerTransitioningDelegate {
+class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate, UIViewControllerTransitioningDelegate, CNPGridMenuDelegate {
   
   var items = [Item]()
   
@@ -102,19 +103,34 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
       self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
       
     } else if cell.swipeDirection == .RightToLeft {
-                  
-      let reminderVC = ReminderViewController()
-        
-        //reminderVC.transitioningDelegate = self
+      var reminderTimes: [String] = [
+        "Later Today",
+        "Tomorrow",
+        "At The Weekend",
+        "Pick A Time"
+      ]
       
-      reminderVC.didSelectReminder = {        
-        self.tableView.reloadData()
-      }
-      reminderVC.didDismissReminder = {
-        self.tableView.reloadData()
-      }
-      reminderVC.view.backgroundColor = UIColor.clearColor()
-      self.presentViewController(reminderVC, animated: false, completion: nil)
+      let laterToday = CNPGridMenuItem()
+      laterToday.icon = UIImage(named: "ic_alarm_48pt")
+      laterToday.title = "Later Today";
+      
+      let tomorrow = CNPGridMenuItem()
+      tomorrow.icon = UIImage(named: "ic_wb_sunny_48pt")
+      tomorrow.title = "Tomorrow";
+      
+      let weekend = CNPGridMenuItem()
+      weekend.icon = UIImage(named: "ic_weekend_48pt")
+      weekend.title = "At The Weekend";
+      
+      let specificTime = CNPGridMenuItem()
+      specificTime.icon = UIImage(named: "ic_date_range_48pt")
+      specificTime.title = "Pick A Time";
+
+      
+      let gridMenu = CNPGridMenu(menuItems: [laterToday, tomorrow, weekend, specificTime])
+      gridMenu.delegate = self
+      self.presentGridMenu(gridMenu, animated: true, completion: nil)
+                  
     }
     
   }
