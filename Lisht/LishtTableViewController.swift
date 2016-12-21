@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import CNPGridMenu
 
-class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate, UIViewControllerTransitioningDelegate, CNPGridMenuDelegate {
+class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate, CNPGridMenuDelegate {
   
   var items = [Item]()
   
@@ -86,11 +86,6 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     
     self.tableView.reloadData()
     return true
-  }
-  
-  // Delegate method for UIViewControllerTransitioningDelegate
-  func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    return ModalAnimationController()
   }
   
   // MARK: - SwipeCell delegate method.

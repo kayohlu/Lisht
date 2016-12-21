@@ -17,7 +17,6 @@
 		CB4053EB1D564C87002ED278 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053E21D564C87002ED278 /* Default-Portrait.png */; };
 		CB4053EC1D564C87002ED278 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053E31D564C87002ED278 /* Default-Portrait@2x.png */; };
 		CB4053ED1D564C87002ED278 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4053E41D564C87002ED278 /* Default@2x.png */; };
-		CB4053EF1D5794B9002ED278 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4053EE1D5794B9002ED278 /* ReminderViewController.swift */; };
 		CB8AB6CF1D69E833006B671B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB8AB6CD1D69E833006B671B /* DataModel.xcdatamodeld */; };
 		CBC25F9F1D319BA1001788FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC25F9E1D319BA1001788FE /* AppDelegate.swift */; };
 		CBC25FA61D319BA1001788FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC25FA51D319BA1001788FE /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 		CBC418FE1D4F425B0093214E /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBC418F21D4F425B0093214E /* Roboto-ThinItalic.ttf */; };
 		CBC56BAF1D4D3082004167FF /* SwipeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */; };
 		CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC56BB01D4D5645004167FF /* SwipeCell.swift */; };
-		CBF732E91D8D6D5900B1DC3B /* ModalAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF732E81D8D6D5900B1DC3B /* ModalAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +69,6 @@
 		CB4053E21D564C87002ED278 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		CB4053E31D564C87002ED278 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		CB4053E41D564C87002ED278 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CB4053EE1D5794B9002ED278 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		CB8AB6CE1D69E833006B671B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		CBC25F9B1D319BA1001788FE /* Lisht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lisht.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC25F9E1D319BA1001788FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCellDelegate.swift; sourceTree = "<group>"; };
 		CBC56BB01D4D5645004167FF /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
 		CBD0DF701E0A9E8100A4D1DD /* Lisht-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lisht-Bridging-Header.h"; sourceTree = "<group>"; };
-		CBF732E81D8D6D5900B1DC3B /* ModalAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAnimationController.swift; sourceTree = "<group>"; };
 		D63AEAAE6C3DA269A643B983 /* Pods-Lisht.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lisht.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lisht/Pods-Lisht.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,8 +163,6 @@
 				CBD0DF701E0A9E8100A4D1DD /* Lisht-Bridging-Header.h */,
 				CBC25F9E1D319BA1001788FE /* AppDelegate.swift */,
 				CBC25FD01D3237CB001788FE /* LishtTableViewController.swift */,
-				CBF732E81D8D6D5900B1DC3B /* ModalAnimationController.swift */,
-				CB4053EE1D5794B9002ED278 /* ReminderViewController.swift */,
 				CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */,
 				CBC25FD41D3299FD001788FE /* Item.swift */,
 				CBC25FA51D319BA1001788FE /* Assets.xcassets */,
@@ -447,8 +441,6 @@
 			files = (
 				CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */,
 				CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */,
-				CBF732E91D8D6D5900B1DC3B /* ModalAnimationController.swift in Sources */,
-				CB4053EF1D5794B9002ED278 /* ReminderViewController.swift in Sources */,
 				CB8AB6CF1D69E833006B671B /* DataModel.xcdatamodeld in Sources */,
 				CBC56BAF1D4D3082004167FF /* SwipeCellDelegate.swift in Sources */,
 				CBC25FD51D3299FD001788FE /* Item.swift in Sources */,
