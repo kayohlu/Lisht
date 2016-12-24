@@ -1,15 +1,18 @@
 PODS:
   - CNPGridMenu (0.3.0)
   - Timepiece (0.4.2)
+  - WZDraggableSwitchHeaderView (0.0.1)
 
 DEPENDENCIES:
   - CNPGridMenu
   - Timepiece (= 0.4.2)
+  - WZDraggableSwitchHeaderView
 
 SPEC CHECKSUMS:
   CNPGridMenu: 0938e9182b321282dd246692625bb7954c8294bb
   Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
+  WZDraggableSwitchHeaderView: 6debb503cc70def6200c45a0b3ecaeb6fb7606c8
 
-PODFILE CHECKSUM: a858dc988719f6e82ccf92795c3e66f7c7978b74
+PODFILE CHECKSUM: be186806fb00c255ab54d7c82cff55af692aae04
 
 COCOAPODS: 1.0.1

@@ -25,15 +25,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     self.items.append(Item(text: nil))
     
     // Register the SwipeViewCell as the Cell class/type we want to use to represent our Swipeable cells.
-    self.tableView.registerClass(SwipeCell.self, forCellReuseIdentifier: "SwipeCell")
-    
-    let managedObjectContext = NSManagedObjectContext()
-    let persistenCoordinator = NSPersistentStoreCoordinator()
-    managedObjectContext.persistentStoreCoordinator = persistenCoordinator
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+    self.tableView.registerClass(SwipeCell.self, forCellReuseIdentifier: "SwipeCell")        
   }
   
   // MARK: - Table view data source
@@ -92,41 +84,45 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
   func cellDidCompleteSwipe(cell: SwipeCell) {
     let indexPath = self.tableView.indexPathForCell(cell)
     if cell.swipeDirection == .LeftToRight {
-      
-      
+      // Mark the task as completed.
       self.items.removeAtIndex(indexPath!.row)
       self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
-      
     } else if cell.swipeDirection == .RightToLeft {
-      var reminderTimes: [String] = [
-        "Later Today",
-        "Tomorrow",
-        "At The Weekend",
-        "Pick A Time"
-      ]
-      
-      let laterToday = CNPGridMenuItem()
-      laterToday.icon = UIImage(named: "ic_alarm_48pt")
-      laterToday.title = "Later Today";
-      
-      let tomorrow = CNPGridMenuItem()
-      tomorrow.icon = UIImage(named: "ic_wb_sunny_48pt")
-      tomorrow.title = "Tomorrow";
-      
-      let weekend = CNPGridMenuItem()
-      weekend.icon = UIImage(named: "ic_weekend_48pt")
-      weekend.title = "At The Weekend";
-      
-      let specificTime = CNPGridMenuItem()
-      specificTime.icon = UIImage(named: "ic_date_range_48pt")
-      specificTime.title = "Pick A Time";
-
-      
-      let gridMenu = CNPGridMenu(menuItems: [laterToday, tomorrow, weekend, specificTime])
-      gridMenu.delegate = self
-      self.presentGridMenu(gridMenu, animated: true, completion: nil)
-                  
+      // Set up a reminder.
+      presentReminderModal()
     }
     
+  }
+  
+  func presentReminderModal() {
+    let laterToday = CNPGridMenuItem()
+    laterToday.icon = UIImage(named: "ic_alarm_48pt")
+    laterToday.title = "Later Today";
+    
+    let tomorrow = CNPGridMenuItem()
+    tomorrow.icon = UIImage(named: "ic_wb_sunny_48pt")
+    tomorrow.title = "Tomorrow";
+    
+    let weekend = CNPGridMenuItem()
+    weekend.icon = UIImage(named: "ic_weekend_48pt")
+    weekend.title = "At The Weekend";
+    
+    let specificTime = CNPGridMenuItem()
+    specificTime.icon = UIImage(named: "ic_date_range_48pt")
+    specificTime.title = "Pick A Time";
+    
+    let gridMenu = CNPGridMenu(menuItems: [laterToday, tomorrow, weekend, specificTime])
+    gridMenu.delegate = self
+    self.presentGridMenu(gridMenu, animated: true, completion: nil)
+
+  }
+  
+  func gridMenuDidTapOnBackground(menu: CNPGridMenu!) {
+    self.dismissGridMenuAnimated(true, completion: nil)
+    self.tableView.reloadData()
+  }
+  
+  func gridMenu(menu: CNPGridMenu!, didTapOnItem item: CNPGridMenuItem!) {
+    print(item)
   }
 }
