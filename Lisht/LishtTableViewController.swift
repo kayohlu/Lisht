@@ -10,22 +10,21 @@ import UIKit
 import CoreData
 import CNPGridMenu
 
-class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate, CNPGridMenuDelegate {
+class LishtTableViewController: UITableViewController, UITextFieldDelegate, SwipeCellDelegate, UIGestureRecognizerDelegate,CNPGridMenuDelegate, UIViewControllerTransitioningDelegate {
   
   var items = [Item]()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     self.tableView.rowHeight = 66.0
-    
     self.tableView.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 250/255, alpha: 1)
-    
     // Initialize the first table cell as an empty Item.
     self.items.append(Item(text: nil))
     
     // Register the SwipeViewCell as the Cell class/type we want to use to represent our Swipeable cells.
-    self.tableView.registerClass(SwipeCell.self, forCellReuseIdentifier: "SwipeCell")        
+    self.tableView.registerClass(SwipeCell.self, forCellReuseIdentifier: "SwipeCell")
   }
   
   // MARK: - Table view data source
@@ -42,7 +41,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     let cell: SwipeCell
     
     // If the item at the index path has no text then I'm assuming it's the first cell at the top with just the placeholder.
-    // I want this cell to not be swipeable. This means it won't be deleted from the able view if someone tries to swipe on it.
+    // I want this cell to not be swipeable. This means it won't be deleted from the table view if someone tries to swipe on it.
     // All the other cells should be swipeable.
     if self.items[indexPath.row].text == nil {
       cell = SwipeCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: nil, disableSwipe: true, cellHeight: self.tableView.rowHeight)
@@ -80,6 +79,11 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     return true
   }
   
+  func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+    print(textField.description)
+    return false
+  }
+  
   // MARK: - SwipeCell delegate method.
   func cellDidCompleteSwipe(cell: SwipeCell) {
     let indexPath = self.tableView.indexPathForCell(cell)
@@ -93,6 +97,7 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
     }
     
   }
+  
   
   func presentReminderModal() {
     let laterToday = CNPGridMenuItem()
@@ -125,4 +130,6 @@ class LishtTableViewController: UITableViewController, UITextFieldDelegate, Swip
   func gridMenu(menu: CNPGridMenu!, didTapOnItem item: CNPGridMenuItem!) {
     print(item)
   }
+  
+  
 }

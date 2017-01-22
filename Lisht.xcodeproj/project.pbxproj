@@ -38,6 +38,7 @@
 		CBC418FE1D4F425B0093214E /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBC418F21D4F425B0093214E /* Roboto-ThinItalic.ttf */; };
 		CBC56BAF1D4D3082004167FF /* SwipeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */; };
 		CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC56BB01D4D5645004167FF /* SwipeCell.swift */; };
+		CBD1B6F51E0EDC39006BF078 /* CustomPushAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD1B6F41E0EDC39006BF078 /* CustomPushAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		CBC56BAE1D4D3082004167FF /* SwipeCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCellDelegate.swift; sourceTree = "<group>"; };
 		CBC56BB01D4D5645004167FF /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
 		CBD0DF701E0A9E8100A4D1DD /* Lisht-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lisht-Bridging-Header.h"; sourceTree = "<group>"; };
+		CBD1B6F41E0EDC39006BF078 /* CustomPushAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPushAnimationController.swift; sourceTree = "<group>"; };
 		D63AEAAE6C3DA269A643B983 /* Pods-Lisht.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lisht.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lisht/Pods-Lisht.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 				CBC25FAA1D319BA1001788FE /* Info.plist */,
 				CBC56BB01D4D5645004167FF /* SwipeCell.swift */,
 				CB8AB6CD1D69E833006B671B /* DataModel.xcdatamodeld */,
+				CBD1B6F41E0EDC39006BF078 /* CustomPushAnimationController.swift */,
 			);
 			path = Lisht;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC25FD11D3237CB001788FE /* LishtTableViewController.swift in Sources */,
+				CBD1B6F51E0EDC39006BF078 /* CustomPushAnimationController.swift in Sources */,
 				CBC56BB11D4D5645004167FF /* SwipeCell.swift in Sources */,
 				CB8AB6CF1D69E833006B671B /* DataModel.xcdatamodeld in Sources */,
 				CBC56BAF1D4D3082004167FF /* SwipeCellDelegate.swift in Sources */,
